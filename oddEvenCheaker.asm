@@ -17,9 +17,9 @@ main:	li $v0,4			#preparing msg1 for display
 	div $t1,$t2			#$t1/$t2
 	mfhi $t3			#storing remainder into $t3
 
-	beq $t3,$s0,EVEN		#if $t3==even, takes to EVEN label
+	beq $t3,$s0,EVEN		#if $t3==even, takes to EVEN label and msg1 will be printed
 	
-	li $v0,4			#else, Number is ODD
+	li $v0,4			#else, msg2 will be printed
 	la $a0,msg2
 	syscall
 	jr $ra
