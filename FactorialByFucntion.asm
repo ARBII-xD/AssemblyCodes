@@ -23,7 +23,7 @@ main:
 	#passes the parameters
 	move $a0, $t0
 	
-	jal fact
+	jal factorial
 
 	#return the function value to the $s0
 	move $t0, $v0
@@ -43,7 +43,7 @@ main:
 	syscall
 
 
-fact:
+factorial:
 	addi $sp, $sp, -4
 	sw $s0, 0($sp)
 
